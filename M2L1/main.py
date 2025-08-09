@@ -14,6 +14,20 @@ print(os.listdir('images'))
 async def on_ready():
     print(f'we have logged in as {bot.user}')
 
+@bot.command()
+async def mem_show(ctx):
+    await mems(ctx)
+
+@bot.command()
+async def rand_mem(ctx):
+    await all_mems(ctx)
+
+@bot.command('duck')
+async def duck(ctx):
+    '''duck komutunu çağırdığımızda, program ordek_resmi_urlsi_al fonksiyonunu çağırır.'''
+    image_url = get_duck_image_url()
+    await ctx.send(image_url)
+
 
 
 @bot.command()
