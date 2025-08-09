@@ -7,4 +7,21 @@ def get_duck_image_url():
     data = res.json()
     return data['url']
 
+def get_dog_image_url():    
+    url = 'https://random.dog/woof.json'
+    res = requests.get(url)
+    data = res.json()
+    return data['url']
+
+def get_fox_image_url():    
+    url = 'https://randomfox.ca/floof/'
+    res = requests.get(url)
+    data = res.json()
+    return data['url']
+
+def get_pok_image_url():    
+    url = 'https://pokeapi.co'
+    res = requests.get(url)
+    data = res.json()
+    return data['url']
 
